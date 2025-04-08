@@ -1,0 +1,65 @@
+[
+    {
+        "id": 1,
+        "title": "Vintage Leica M3 Camera",
+        "description": "A legendary 35mm film camera renowned for its precision engineering, iconic design, and exceptional image quality.",
+        "currentBidPrice": 120.50,
+        "timeLeft": "2h 30m",
+        "bidsCount": 14,
+        "image": "https://i.ibb.co.com/HDKTQS7Q/Bid1-min.png"
+    },
+    {
+        "id": 2,
+        "title": "1965 Gibson SG Standard Electric Guitar",
+        "description": "A classic rock icon, the 1965 Gibson SG Standard delivers powerful tone and sleek, lightweight design favored by legendary guitarists.",
+        "currentBidPrice": 245.00,
+        "timeLeft": "5h 12m",
+        "bidsCount": 22,
+        "image": "https://i.ibb.co.com/HLvS5wVv/Bid2-min.png"
+    },
+    {
+        "id": 3,
+        "title": "Original Apple Macintosh 128K (1984)",
+        "description": "The Original Apple Macintosh 128K (1984) is a groundbreaking personal computer that introduced a user-friendly graphical interface and compact design.",
+        "currentBidPrice": 670.00,
+        "timeLeft": "1d 4h",
+        "bidsCount": 35,
+        "image": "https://i.ibb.co.com/4R1S7Nbf/Bid3-min.png"
+    },
+    {
+        "id": 4,
+        "title": "Rolex Submariner 16610",
+        "description": "The Rolex Submariner 16610 is a legendary dive watch known for its robust design, precision, and timeless appeal.",
+        "currentBidPrice": 1250.75,
+        "timeLeft": "3d 8h",
+        "bidsCount": 58,
+        "image": "https://i.ibb.co.com/39Wr7hXk/Bid4-min.png"
+    },
+    {
+        "id": 5,
+        "title": "First Edition 'The Great Gatsby' by F. Scott Fitzgerald",
+        "description": "A rare first edition of Fitzgerald’s classic novel, prized for its literary and historical significance.",
+        "currentBidPrice": 3250.00,
+        "timeLeft": "6h 45m",
+        "bidsCount": 81,
+        "image": "https://i.ibb.co.com/vyCj3Qj/Bid6-min.png"
+    },
+    {
+        "id": 6,
+        "title": "Mid-Century Modern Eames Lounge Chair",
+        "description": "An iconic piece of mid-century design, the Eames Lounge Chair blends luxury, comfort, and timeless style.",
+        "currentBidPrice": 85.25,
+        "timeLeft": "12h 15m",
+        "bidsCount": 19,
+        "image": "https://i.ibb.co.com/yntNhCj9/Bid5-min.png"
+    },
+    {
+        "id": 7,
+        "title": "Banksy Original Screen Print",
+        "description": "A rare and provocative artwork, the Banksy original screen print showcases the artist’s signature blend of satire and street art.",
+        "currentBidPrice": 310.00,
+        "timeLeft": "18h 40m",
+        "bidsCount": 27,
+        "image": "https://i.ibb.co.com/fdkXdJr5/Bid7-min.png"
+    }
+]

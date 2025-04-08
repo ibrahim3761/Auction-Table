@@ -1,12 +1,22 @@
 import './App.css'
+import Footer from './Components/Footer/Footer'
+import Hero from './Components/Hero/Hero'
+import Navbar from './Components/Navbar/Navbar'
 
 function App() {
   
 
   return (
     <>
-      <h1>Hello</h1>
-      <button className="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg xl:btn-xl">Responsive</button>
+      <div>
+        <Navbar></Navbar>
+      </div>
+      <div>
+        <Hero></Hero>
+      </div>
+      <div>
+        <Footer></Footer>
+      </div>
     </>
   )
 }
