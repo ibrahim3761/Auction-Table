@@ -1,7 +1,7 @@
 import React from "react";
 import { IoMdNotificationsOutline } from "react-icons/io";
 
-const Navbar = () => {
+const Navbar = ({favorites,Total}) => {
   return (
     <div className="poppins">
       <div className="flex items-center justify-between bg-base-100 shadow-sm px-14 py-4">
@@ -24,15 +24,15 @@ const Navbar = () => {
             <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
               <div className="indicator">
                 <IoMdNotificationsOutline size={23} />
-                <span className="badge badge-sm indicator-item">8</span>
+                <span className="badge badge-sm indicator-item">{favorites.length}</span>
               </div>
             </div>
             <div tabIndex={0} className="card card-compact dropdown-content bg-base-100 z-10 mt-3 w-52 shadow">
               <div className="card-body">
-                <span className="text-lg font-bold">8 Items</span>
-                <span className="text-info">Subtotal: $999</span>
+                <span className="text-lg font-bold">{favorites.length} Items</span>
+                <span className="text-info">Subtotal: ${Total}</span>
                 <div className="card-actions">
-                  <button className="btn btn-primary btn-block">View cart</button>
+                  <a href="#auction-items"><button className="btn btn-primary btn-block">View Items</button></a>
                 </div>
               </div>
             </div>

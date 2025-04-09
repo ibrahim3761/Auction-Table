@@ -1,5 +1,5 @@
 import React from "react";
-
+import banner from '../../assets/Banner-min.jpg';
 const Hero = () => {
   return (
     <div className="sora">
@@ -7,7 +7,7 @@ const Hero = () => {
         className="hero min-h-screen"
         style={{
           backgroundImage:
-            "url('./src/assets/Banner-min.jpg')",
+            `url(${banner})`,
         }}
       >
         <div className="text-neutral-content justify-start w-full px-14">

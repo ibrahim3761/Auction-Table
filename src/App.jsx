@@ -26,7 +26,7 @@ function App() {
 
       toast.warn("Item Removed From Favorites!", {
         position: "top-right",
-        autoClose: 5000,
+        autoClose: 1500,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
@@ -42,7 +42,7 @@ function App() {
 
       toast.success("Item Added to your Favorite Lists!", {
         position: "top-right",
-        autoClose: 5000,
+        autoClose: 1500,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
@@ -57,7 +57,7 @@ function App() {
     <>
       <ToastContainer
         position="top-right"
-        autoClose={5000}
+        autoClose={1500}
         hideProgressBar={false}
         newestOnTop={false}
         closeOnClick
@@ -69,18 +69,18 @@ function App() {
         transition={Bounce}
       />
       <div>
-        <Navbar></Navbar>
+        <Navbar favorites={favorites} Total={Total}></Navbar>
       </div>
       <div>
         <Hero></Hero>
       </div>
       {/* auction */}
-      <div className="sora main-container bg-[#EBF0F5] py-10 px-14">
+      <div id="auction-items" className="sora main-container bg-[#EBF0F5] py-10 px-14">
         <h1 className="text-[#0E2954] text-3xl">Active Auctions</h1>
         <p className="font-normal pt-3">
           Discover and bid on extraordinary items
         </p>
-        <div className="grid grid-cols-3 gap-10 text-center mt-5">
+        <div  className="grid grid-cols-3 gap-10 text-center mt-5">
           {/* left side */}
           <div className="left-container col-span-2 ">
             <div className="bg-white rounded-lg">
