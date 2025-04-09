@@ -28,7 +28,7 @@ const Item = ({ item, handleFavorite, favorites }) => {
           </div>
         </div>
       </td>
-      <td>{item.currentBidPrice}</td>
+      <td>${item.currentBidPrice.toFixed(2)}</td>
       <td>{item.timeLeft}</td>
       <td>
         <button

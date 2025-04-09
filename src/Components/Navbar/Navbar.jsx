@@ -30,7 +30,7 @@ const Navbar = ({favorites,Total}) => {
             <div tabIndex={0} className="card card-compact dropdown-content bg-base-100 z-10 mt-3 w-52 shadow">
               <div className="card-body">
                 <span className="text-lg font-bold">{favorites.length} Items</span>
-                <span className="text-info">Subtotal: ${Total}</span>
+                <span className="text-info">Subtotal: ${Total.toFixed(2)}</span>
                 <div className="card-actions">
                   <a href="#auction-items"><button className="btn btn-primary btn-block">View Items</button></a>
                 </div>

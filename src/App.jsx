@@ -113,7 +113,7 @@ function App() {
                   {favorites.map((item) => (
                     <div
                       key={item.id}
-                      className="border-b p-4 text-left flex justify-between items-start"
+                      className="border m-4 p-2 rounded-lg text-left flex justify-between items-start"
                     >
                       <div className="flex gap-3">
                         <div className="avatar">
@@ -122,9 +122,9 @@ function App() {
                           </div>
                         </div>
                         <div className="px-2 flex flex-col justify-around">
-                          <h3 className="font-bold">${item.title}</h3>
+                          <h3 className="font-bold">{item.title}</h3>
                           <div className="flex gap-3 items-center">
-                            <p className="text-sm">{item.currentBidPrice}</p>
+                            <p className="text-sm">${item.currentBidPrice.toFixed(2)}</p>
                             <p>Bids: {item.bidsCount}</p>
                           </div>
                         </div>
@@ -139,9 +139,14 @@ function App() {
                   ))}
                 </div>
               )}
-              <h1 className="font-semibold pt-3">
-                Total Amount: ${Total === 0 ? "0000.00" : Total}
+              <div className="flex justify-between items-center text-center border-t px-4 pt-4">
+              <h1 className="font-semibold">
+                Total Amount 
               </h1>
+              <h1>
+              ${Total === 0 ? "0000.00" : Total.toFixed(2)}
+              </h1>
+              </div>
             </div>
           </div>
         </div>
