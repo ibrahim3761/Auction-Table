@@ -6,7 +6,7 @@ const Items = ({ itemspromise ,handleFavorite,favorites }) => {
   // console.log(items);
 
   return (
-    <div className="sora px-8 py-6">
+    <div className="sora px-8 py-14">
       <div className="overflow-hidden border  rounded-lg ">
         <table className="table w-full border-black rounded-lg">
           {/* head */}
