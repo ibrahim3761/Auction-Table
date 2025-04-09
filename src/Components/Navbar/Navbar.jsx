@@ -14,7 +14,7 @@ const Navbar = ({favorites,Total}) => {
 
         <ul className="flex gap-6 text-gray-700 text-lg font-medium">
           <li className="hover:text-[#003EA4] cursor-pointer">Home</li>
-          <li className="hover:text-[#003EA4] cursor-pointer">Auction</li>
+          <a href="#auction-items"><li className="hover:text-[#003EA4] cursor-pointer">Auction</li></a>
           <li className="hover:text-[#003EA4] cursor-pointer">Categories</li>
           <li className="hover:text-[#003EA4] cursor-pointer">How it works</li>
         </ul>
