@@ -6,6 +6,8 @@ import Items from "./Components/Items/Items";
 import Navbar from "./Components/Navbar/Navbar";
 import { FaRegHeart } from "react-icons/fa6";
 import { MdCancel } from "react-icons/md";
+import { ToastContainer, toast, Bounce } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
 
 const itemspromise = fetch("data.json").then((res) => res.json());
 
@@ -16,17 +18,60 @@ function App() {
   const [Total, setTotal] = useState(0);
 
   const handleFavorite = (item) => {
-    if (favorites.includes(item)) {
-      setFavorites(favorites.filter((i) => i !== item));
+    const isAlreadyFavorite = favorites.some((fav) => fav.id === item.id);
+
+    if (isAlreadyFavorite) {
+      // Removing from favorites
+      setFavorites(favorites.filter((i) => i.id !== item.id));
       setTotal((prevTotal) => prevTotal - parseFloat(item.currentBidPrice));
+      
+      toast.warn('Item Removed From Favorites!', {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        transition: Bounce,
+        });
     } else {
+      // Adding to favorites
       setFavorites([...favorites, item]);
       setTotal((prevTotal) => prevTotal + parseFloat(item.currentBidPrice));
+      toast.dismiss();
+      toast.success('Item Added to your Favorite Lists!', {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        transition: Bounce,
+        });
+        
     }
   };
-
   return (
     <>
+      <ToastContainer
+        position="top-right"
+        autoClose={5000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="light"
+        transition={Bounce}
+      />
+      {/* Same as */}
+      <ToastContainer />
       <div>
         <Navbar></Navbar>
       </div>
