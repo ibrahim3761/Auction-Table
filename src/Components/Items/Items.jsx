@@ -18,7 +18,7 @@ const Items = ({ itemspromise ,handleFavorite,favorites }) => {
               <th className="text-center text-black">Bid Now</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody className="sora">
             {items.map((item) => (
               <Item key={item.id} item={item} handleFavorite={handleFavorite} favorites={favorites}></Item>
             ))}

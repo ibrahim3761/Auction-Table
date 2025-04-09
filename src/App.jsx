@@ -7,7 +7,7 @@ import Navbar from "./Components/Navbar/Navbar";
 import { FaRegHeart } from "react-icons/fa6";
 import { MdCancel } from "react-icons/md";
 import { ToastContainer, toast, Bounce } from "react-toastify";
-import 'react-toastify/dist/ReactToastify.css';
+import "react-toastify/dist/ReactToastify.css";
 
 const itemspromise = fetch("data.json").then((res) => res.json());
 
@@ -19,13 +19,12 @@ function App() {
 
   const handleFavorite = (item) => {
     const isAlreadyFavorite = favorites.some((fav) => fav.id === item.id);
-
     if (isAlreadyFavorite) {
       // Removing from favorites
       setFavorites(favorites.filter((i) => i.id !== item.id));
       setTotal((prevTotal) => prevTotal - parseFloat(item.currentBidPrice));
-      
-      toast.warn('Item Removed From Favorites!', {
+
+      toast.warn("Item Removed From Favorites!", {
         position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
@@ -35,13 +34,13 @@ function App() {
         progress: undefined,
         theme: "light",
         transition: Bounce,
-        });
+      });
     } else {
       // Adding to favorites
       setFavorites([...favorites, item]);
       setTotal((prevTotal) => prevTotal + parseFloat(item.currentBidPrice));
-      toast.dismiss();
-      toast.success('Item Added to your Favorite Lists!', {
+
+      toast.success("Item Added to your Favorite Lists!", {
         position: "top-right",
         autoClose: 5000,
         hideProgressBar: false,
@@ -51,8 +50,7 @@ function App() {
         progress: undefined,
         theme: "light",
         transition: Bounce,
-        });
-        
+      });
     }
   };
   return (
@@ -70,8 +68,6 @@ function App() {
         theme="light"
         transition={Bounce}
       />
-      {/* Same as */}
-      <ToastContainer />
       <div>
         <Navbar></Navbar>
       </div>
@@ -86,14 +82,16 @@ function App() {
         </p>
         <div className="grid grid-cols-3 gap-10 text-center mt-5">
           {/* left side */}
-          <div className="left-container col-span-2 bg-white rounded-lg">
-            <Suspense fallback={<h1>Loading...</h1>}>
-              <Items
-                itemspromise={itemspromise}
-                handleFavorite={handleFavorite}
-                favorites={favorites}
-              ></Items>
-            </Suspense>
+          <div className="left-container col-span-2 ">
+            <div className="bg-white rounded-lg">
+              <Suspense fallback={<h1>Loading...</h1>}>
+                <Items
+                  itemspromise={itemspromise}
+                  handleFavorite={handleFavorite}
+                  favorites={favorites}
+                ></Items>
+              </Suspense>
+            </div>
           </div>
           {/* right side */}
           <div className="items-center right-container col-span-1 ">

@@ -4,7 +4,6 @@ import { FaRegHeart, FaHeart } from "react-icons/fa6";
 const Item = ({ item, handleFavorite, favorites }) => {
   const [isFavorite, setIsFavorite] = useState(false);
 
-  // Sync local state with props.favorites
   useEffect(() => {
     const currentlyFavorite = favorites.some((favItem) => favItem.id === item.id);
     setIsFavorite(currentlyFavorite);

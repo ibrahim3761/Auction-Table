@@ -23,7 +23,7 @@ const Navbar = () => {
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost btn-circle">
               <div className="indicator">
-                <IoMdNotificationsOutline size={20} />
+                <IoMdNotificationsOutline size={23} />
                 <span className="badge badge-sm indicator-item">8</span>
               </div>
             </div>
@@ -39,7 +39,7 @@ const Navbar = () => {
           </div>
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost btn-circle avatar">
-              <div className="w-10 rounded-full">
+              <div className="w-14 rounded-full">
                 <img
                   alt="User Avatar"
                   src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
